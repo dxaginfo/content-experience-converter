@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content-to-Experience Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-sync-alt"></i>
+            <h1>Content-to-Experience Converter</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-section="transform">Transform</a></li>
+                <li><a href="#" data-section="check">Check Consistency</a></li>
+                <li><a href="#" data-section="optimize">Optimize</a></li>
+                <li><a href="#" data-section="measure">Measure ROI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="transform" class="active">
+            <div class="section-header">
+                <h2>Transform Static Content</h2>
+                <p>Upload or create content to transform it into interactive experiences</p>
+            </div>
+            
+            <div class="content-input">
+                <div class="input-options">
+                    <button id="uploadButton" class="btn primary"><i class="fas fa-upload"></i> Upload Content</button>
+                    <button id="createButton" class="btn secondary"><i class="fas fa-edit"></i> Create New</button>
+                    <input type="file" id="fileUpload" hidden accept=".txt,.md,.csv,.json,.html">
+                </div>
+                
+                <div class="content-preview">
+                    <h3>Content Preview</h3>
+                    <div id="previewArea" class="preview-container">
+                        <div class="placeholder">
+                            <i class="fas fa-file-alt"></i>
+                            <p>No content loaded. Upload a file or create new content to begin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transformation-options">
+                <h3>Transformation Options</h3>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h4>Article to Interactive Story</h4>
+                        <p>Transform text articles into interactive scrolling experiences</p>
+                        <button class="btn small" disabled>Select</button>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h4>Data to Visualization</h4>
+                        <p>Convert statistics and data into interactive charts and graphs</p>
+                        <button class="btn small" disabled>Select</button>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-cube"></i>
+                        <h4>Product to Demo</h4>
+                        <p>Turn product descriptions into interactive product demonstrations</p>
+                        <button class="btn small" disabled>Select</button>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-comments"></i>
+                        <h4>Testimonial to Story</h4>
+                        <p>Convert customer testimonials into interactive customer stories</p>
+                        <button class="btn small" disabled>Select</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="check">
+            <div class="section-header">
+                <h2>Multi-Platform Consistency Checker</h2>
+                <p>Ensure your content appears consistently across different platforms</p>
+            </div>
+            
+            <div class="platform-preview">
+                <div class="device-selector">
+                    <button class="device-btn active" data-device="desktop">
+                        <i class="fas fa-desktop"></i>
+                        <span>Desktop</span>
+                    </button>
+                    <button class="device-btn" data-device="tablet">
+                        <i class="fas fa-tablet-alt"></i>
+                        <span>Tablet</span>
+                    </button>
+                    <button class="device-btn" data-device="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile</span>
+                    </button>
+                </div>
+                
+                <div class="preview-container">
+                    <div class="device-frame desktop active">
+                        <div class="device-screen">
+                            <div class="placeholder">
+                                <i class="fas fa-desktop"></i>
+                                <p>Transform content first to preview it across devices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="device-frame tablet">
+                        <div class="device-screen">
+                            <div class="placeholder">
+                                <i class="fas fa-tablet-alt"></i>
+                                <p>Transform content first to preview it across devices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="device-frame mobile">
+                        <div class="device-screen">
+                            <div class="placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                                <p>Transform content first to preview it across devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="consistency-results">
+                <h3>Consistency Analysis</h3>
+                <div class="analysis-container">
+                    <div class="placeholder">
+                        <i class="fas fa-search"></i>
+                        <p>No analysis available. Transform content and check consistency to see results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="optimize">
+            <div class="section-header">
+                <h2>Engagement Optimization</h2>
+                <p>Enhance your content with interactive engagement elements</p>
+            </div>
+            
+            <div class="optimization-container">
+                <div class="content-view">
+                    <h3>Content View</h3>
+                    <div class="content-container">
+                        <div class="placeholder">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Transform content first to optimize engagement</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="optimization-panel">
+                    <h3>Optimization Suggestions</h3>
+                    <div class="suggestions-list">
+                        <div class="placeholder">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>No suggestions available. Transform content to see optimization opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ab-testing">
+                <h3>A/B Testing</h3>
+                <div class="test-setup">
+                    <div class="placeholder">
+                        <i class="fas fa-flask"></i>
+                        <p>Transform and optimize content to set up A/B tests</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="measure">
+            <div class="section-header">
+                <h2>Experience ROI Measurement</h2>
+                <p>Track and measure the performance of your interactive experiences</p>
+            </div>
+            
+            <div class="dashboard-container">
+                <div class="metric-cards">
+                    <div class="metric-card">
+                        <h3>Engagement Rate</h3>
+                        <div class="metric-value">-</div>
+                        <div class="metric-comparison">vs. <span>-</span> for static content</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Avg. Time Spent</h3>
+                        <div class="metric-value">-</div>
+                        <div class="metric-comparison">vs. <span>-</span> for static content</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Conversion Rate</h3>
+                        <div class="metric-value">-</div>
+                        <div class="metric-comparison">vs. <span>-</span> for static content</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Sharing Rate</h3>
+                        <div class="metric-value">-</div>
+                        <div class="metric-comparison">vs. <span>-</span> for static content</div>
+                    </div>
+                </div>
+                
+                <div class="charts-container">
+                    <div class="chart-box">
+                        <h3>Performance Over Time</h3>
+                        <div id="timeChart" class="chart">
+                            <div class="placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>No data available. Transform content and gather metrics to see performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <h3>Engagement by Platform</h3>
+                        <div id="platformChart" class="chart">
+                            <div class="placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>No data available. Transform content and gather metrics to see performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Content-to-Experience Converter | <a href="https://github.com/dxaginfo/content-experience-converter" target="_blank">GitHub Repository</a></p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/transform.js"></script>
+    <script src="js/consistency.js"></script>
+    <script src="js/optimization.js"></script>
+    <script src="js/measurement.js"></script>
+</body>
+</html>
